@@ -1,0 +1,301 @@
+
+* {
+  margin: 0px;
+}
+
+body {
+  background-color: #1e1e2f;
+}
+
+nav {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbar-img {
+  width: 160px;
+}
+
+.searchbar-container {
+  display: flex;
+  margin: 0px auto;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.searchbar {
+  background-color: white;
+  margin-right: 20px;
+}
+
+.searchbar input {
+  padding: 10px;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.25);
+  border-radius: 3px;
+  border: none;
+}
+
+.searchbar-btn button{
+  background-color: #0e6f9f;
+  border: none;
+  border-radius: 10px;
+  height: 44px;
+  color: white;
+  padding: 10px 17px;
+}
+
+.pokedex-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.pokedex-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pokemon-card {
+  display: flex;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+  border-radius: 3px;
+}
+
+.pokemon-image {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+.pokemon-image-container {
+  padding: 0px 5px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 10px 10px 0px;
+  flex: 1;
+}
+
+.card-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-top h3{
+  text-transform: capitalize;
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pokemon-type {
+  display: flex;
+}
+
+.pokemon-type-text {
+  margin-right: 10px;
+  text-transform: capitalize;
+}
+
+.pagination-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pokemon-heart-btn {
+  border: none;
+  background-color: transparent;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.25);
+  padding: 4px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.not-found-text {
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 20px;
+}
+
+.btn-right, .btn-left{
+  background-color: white;
+  font-size: 1.25rem;
+  border: none;
+}
+
+.white-content {
+  background: white;
+}
+
+.App-header {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+
+.wrapper {
+  position: absolute;
+  width: 20%;
+  height: 10%;
+}
+.wrapper .switch {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 30px;
+}
+.wrapper .switch input {
+  display: none;
+}
+.wrapper .switch .wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 40px;
+  width: 100px;
+  height: 30px;
+  display: none;
+}
+.wrapper .switch .wave:after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  border-radius: 100%;
+  background: #fff;
+  position: absolute;
+  top: 3px;
+  left: 20%;
+  opacity: 0.4;
+}
+.wrapper .switch .wave:before {
+  content: '';
+  width: 35px;
+  height: 2px;
+  border-radius: 100%;
+  background: #fff;
+  position: absolute;
+  top: 10px;
+  left: 30%;
+  opacity: 0.3;
+}
+.wrapper .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  transition: all 1.4s;
+  border-radius: 50px;
+  z-index: 100;
+  overflow: hidden;
+}
+.wrapper .switch .slider:before,
+.wrapper .switch .slider:after {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 5px;
+  border-radius: 30px;
+  background-color: black;
+}
+
+.wrapper .switch .slider:before {
+  transition: 0.4s;
+}
+.wrapper .switch .slider:after {
+  transition: 0.5s;
+}
+.wrapper .switch .slider .fish {
+  position: absolute;
+  left: -20%;
+  top: 20%;
+  transition: 1.5s all;
+}
+
+.wrapper .switch .slider .fish .eye {
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  width: 4px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 100%;
+}
+.wrapper .switch .slider .fish .eye:after {
+  content: '';
+  width: 1px;
+  height: 1px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+
+.wrapper .switch input:checked + .slider {
+  background-color: transparent;
+}
+.wrapper .switch input:checked + .slider .fish {
+  animation: fishMovement 4s linear infinite;
+}
+.wrapper .switch input:checked ~ .wave {
+  background-color: #e74a42;
+  display: block;
+  
+}
+.wrapper .switch input:checked + .slider:before {
+  transform: translateX(70px);
+}
+.wrapper .switch input:checked + .slider:after {
+  transform: translateX(70px);
+}
+
+.wrapper .switch input:checked ~ .sky {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+
+.wrapper a {
+  color: #fff;
+  padding: 15px;
+  display: block;
+  font-family: sans-serif;
+  font-size: 10px;
+  position: absolute;
+}
+svg {
+  display: none;
+}
+
+.App {
+  text-align: center;
+}
