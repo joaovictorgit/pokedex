@@ -3,10 +3,6 @@
   margin: 0px;
 }
 
-body {
-  background-color: #1e1e2f;
-}
-
 nav {
   height: 100px;
   display: flex;

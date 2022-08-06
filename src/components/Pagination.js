@@ -1,5 +1,5 @@
 import React from "react";
-import {AiFillLeftCircle, AiFillRightCircle} from 'react-icons/ai';
+//import {AiFillLeftCircle, AiFillRightCircle} from 'react-icons/ai';
 
 const Pagination = (props) => {
 
@@ -7,9 +7,9 @@ const Pagination = (props) => {
 
     return(
         <div className="pagination-container">
-            <button onClick={onLeftClick} className="btn-left"><div><AiFillLeftCircle /></div></button>
+            <button onClick={onLeftClick} className="btn-left"><div>◀️</div></button>
             <div>{page} de {totalPages}</div>
-            <button onClick={onRightClick} className="btn-right"><div><AiFillRightCircle/></div></button>
+            <button onClick={onRightClick} className="btn-right"><div>▶️</div></button>
         </div>
     );
 }
